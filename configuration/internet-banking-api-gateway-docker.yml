@@ -43,7 +43,7 @@ spring:
 app:
   config:
     keycloak:
-      url: http://keycloak_web:8080
+      url: http://192.168.1.5:8080
       realm: javatodev-internet-banking
 
 server:
