@@ -18,3 +18,18 @@ eureka:
 info:
   app:
     name: ${spring.application.name}
+
+
+##ACTUATOR ENDPOINT CONFIGURATIONS
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+  info:
+    env:
+      enabled: true
+
+logging:
+  file:
+    name: '/var/log/internet-banking-utility-payment-service/application.log'

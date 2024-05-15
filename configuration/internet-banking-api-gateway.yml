@@ -63,3 +63,19 @@ logging:
   level:
     org.springframework.cloud.gateway: DEBUG
     reactor.netty.http.client: DEBUG
+  file:
+    name: '/var/log/internet-banking-api-gateway/application.log'
+
+info:
+  app:
+    name: ${spring.application.name}
+
+##ACTUATOR ENDPOINT CONFIGURATIONS
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+  info:
+    env:
+      enabled: true
