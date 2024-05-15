@@ -4,7 +4,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://192.168.1.5:8080/realms/${app.config.keycloak.realm}/protocol/openid-connect/certs
+          jwk-set-uri: ${app.config.keycloak.realm}/realms/${app.config.keycloak.realm}/protocol/openid-connect/certs
 
   ## GATEWAY CONFIGURATIONS
   cloud:
@@ -43,7 +43,7 @@ spring:
 app:
   config:
     keycloak:
-      url: http://keycloak_web:8080
+      url: http://keycloak_web
       realm: javatodev-internet-banking
 
 server:
