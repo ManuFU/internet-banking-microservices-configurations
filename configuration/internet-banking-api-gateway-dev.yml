@@ -38,6 +38,16 @@ spring:
             - Path=/utility-payment/**
           filters:
             - StripPrefix=1
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
+  zipkin:
+    base-url: http://192.168.1.5:9411
+    enabled: true
+    service:
+      name: ${spring.application.name}
 
 ## SECURITY BASED CONFIGURATIONS
 app:
