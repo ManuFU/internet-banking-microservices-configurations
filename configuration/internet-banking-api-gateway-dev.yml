@@ -1,4 +1,9 @@
 spring:
+  zipkin:
+    base-url: http://192.168.1.5:9411
+  sleuth:
+    sampler:
+      probability: 1.0
   ## API SECURITY WITH KEYCLOAK PROVIDER
   security:
     oauth2:

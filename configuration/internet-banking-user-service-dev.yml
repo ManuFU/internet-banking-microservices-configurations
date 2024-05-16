@@ -6,7 +6,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-
+  zipkin:
+    base-url: http://192.168.1.5:9411
+  sleuth:
+    sampler:
+      probability: 1.0
 server:
   port: 8083
 
