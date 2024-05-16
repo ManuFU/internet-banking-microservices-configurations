@@ -25,7 +25,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: info,health
+        include: info,health,configprops
   info:
     env:
       enabled: true
