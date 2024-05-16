@@ -7,14 +7,6 @@ spring:
     hibernate:
       ddl-auto: none
 
-management:
-  zipkin:
-    tracing:
-      endpoint: http://192.168.1.5:9411/api/v2/spans
-  tracing:
-    sampling:
-      probability: 1.0
-
 server:
   port: 8092
 
