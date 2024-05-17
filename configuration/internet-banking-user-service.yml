@@ -30,19 +30,6 @@ app:
     client:
       core-banking: core-banking-service
 
-##ACTUATOR ENDPOINT CONFIGURATIONS
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    prometheus:
-      enabled: true
-  info:
-    env:
-      enabled: true
-
 logging:
   file:
     name: '/var/log/internet-banking-user-service/application.log'
