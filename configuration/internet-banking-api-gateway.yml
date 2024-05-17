@@ -75,7 +75,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: info,health,configprops,prometheus
+        include: '*'
   info:
     env:
       enabled: true
