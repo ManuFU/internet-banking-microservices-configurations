@@ -75,7 +75,12 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: prometheus, metrics, info, health, shutdown, beans
+  security:
+    enabled: false
+  server:
+    port: 8083
+    ip: 192.168.1.5
   endpoint:
     metrics:
       enabled: true
@@ -83,7 +88,11 @@ management:
       enabled: true
     health:
       show-components: always
-
+      show-details: always
+      probes:
+        enabled: true
+    shutdown:
+      enabled: true
   info:
     env:
       enabled: true
