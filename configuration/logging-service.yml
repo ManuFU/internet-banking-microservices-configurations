@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: logging-monitoring-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/logging_monitoring_service
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+server:
+  port: 8086
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+
+info:
+  app:
+    name: ${spring.application.name}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: '/var/log/logging-monitoring-service/application.log'
+
+zipkin:
+  base-url: http://localhost:9411
+
+app:
+  config:
+    kafka:
+      bootstrap-servers: localhost:9092
+      topic: log-events
