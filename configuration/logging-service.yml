@@ -1,14 +1,6 @@
 spring:
   application:
     name: logging-monitoring-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/logging_monitoring_service
-    username: root
-    password: password
-  jpa:
-    hibernate:
-      ddl-auto: update
-
 
 server:
   port: 8086
