@@ -43,7 +43,7 @@ spring:
 app:
   config:
     keycloak:
-      url: http://192.168.1.5:8080
+      url: http://localhost:3306
       realm: javatodev-internet-banking
 
 management:
